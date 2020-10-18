@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Login</title>
+<!-- Meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- //Meta tags -->
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" /><!-- Style-CSS -->
+<link href="/static/css/font-awesome.css" rel="stylesheet"><!-- font-awesome-icons -->
+
+
+</head>
+
+<body>
+<section class="w3l-form-36">
+	<div class="form-36-mian section-gap">
+		<div class="wrapper">
+			<div class="form-inner-cont">
+				<h3>登录界面</h3>
+				<!-- 登陆页面的表单 -->
+				<form action="/login" method="post" class="signin-form">
+					<!-- 账号输入框 -->
+					<div class="form-input">
+						<span class="fa fa-envelope-o" aria-hidden="true"></span> 
+						<input type="text" name="uid" th:value="${uid}"  placeholder="Userid" required
+							onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')"/>
+
+					</div>
+					<!-- 密码输入框 -->
+					<div class="form-input">
+						<span class="fa fa-key" aria-hidden="true"></span> 
+						<input type="password" name="upass" placeholder="Password" th:value="${upass}"
+							required />
+					</div>
+					<div class="login-remember d-grid">
+						<label class="check-remaind">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							<p class="remember">Remember me</p>
+						</label>
+						<button class="btn theme-button">登录</button>
+					</div>
+					<!-- 忘记密码超链接路径 -->
+					<div class="new-signup">
+						<a href="/identitypage.html" class="signuplink">忘记密码?</a>
+					</div>
+				</form>
+				<p class="signup">还没有账户？ <a href="/register.html" class="signuplink" >注册</a></p>
+				<p style="font-size: 10px;font-weight:bold;color: #dd4b39;font-size: large;" th:text="${tips}"/>
+
+			</div>
+			<!-- copyright -->
+			<div class="copy-right">
+				<p>Copyright &copy; 2020.ArtificialSystem All rights reserved.</p>
+			</div>
+			<!-- //copyright -->
+
+		</div>
+	</div>
+</section>
+</body>
+
+</html>

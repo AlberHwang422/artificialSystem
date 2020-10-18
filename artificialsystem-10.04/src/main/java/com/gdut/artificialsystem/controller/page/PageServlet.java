@@ -1,0 +1,41 @@
+package com.gdut.artificialsystem.controller.page;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface PageServlet {
+
+    /**
+     * 跳转到login.html
+     * @param request
+     * @param response
+     * @return
+     */
+    public String loginPage(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 跳转到验证页面
+     * @return
+     */
+    public String identityPage(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 跳转到注册页面
+     * @return
+     */
+    public String registerPage(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 跳转重置密码界面
+     * @param request
+     * @param response
+     * @return
+     */
+    public String resetPage(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 跳转到收集性格页面
+     * @return
+     */
+    public String characterPage(HttpServletRequest request, HttpServletResponse response);
+}

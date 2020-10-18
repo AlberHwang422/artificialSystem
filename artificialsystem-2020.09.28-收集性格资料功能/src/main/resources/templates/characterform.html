@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <form action="/test" method="POST">
+        <div>
+            <h4>选择题</h4>
+            <ol>
+                <li>
+                    <span> 你晚上一般几点睡觉?</span>
+                    <div><input type="radio" name="question1" value="1">(A)22点前</div>
+                    <div><input type="radio" name="question1" value="2">(B)22-24点</div>
+                    <div><input type="radio" name="question1" value="3">(C)0-1点</div>
+                    <div><input type="radio" name="question1" value="4">(D)1点-2点</div>
+                </li>
+
+                <li>
+                    <span>熬夜（0点后）的频率？</span>
+                    <div><input type="radio" name="question2" value="1">(A)从不熬夜</div>
+                    <div><input type="radio" name="question2" value="2">(B)一周1-2次</div>
+                    <div><input type="radio" name="question2" value="3">(C)一周至少2次</div>
+                    <div><input type="radio" name="question2" value="4">(D)天天熬夜</div>
+                </li>
+
+                <li>
+                    <span>熬夜的话一般在做什么？</span>
+                    <div><input type="radio" name="question3" value="1">(A)打游戏</div>
+                    <div><input type="radio" name="question3" value="2">(B)煲剧、看小说、玩手机</div>
+                    <div><input type="radio" name="question3" value="3">(C)学习</div>
+                    <div><input type="radio" name="question3" value="4">(D)夜归</div>
+                </li>
+
+                <li>
+                    <span>早上起床时间</span>
+                    <div><input type="radio" name="question4" value="1">(A)6点前</div>
+                    <div><input type="radio" name="question4" value="2">(B)7-9点</div>
+                    <div><input type="radio" name="question4" value="3">(C)上课前半小时</div>
+                    <div><input type="radio" name="question4" value="4">(D)早上不起床</div>
+                </li>
+
+                <li>
+                    <span>有无午睡习惯</span>
+                    <div><input type="radio" name="question5" value="1">(A)有</div>
+                    <div><input type="radio" name="question5" value="2">(B)无</div>
+                    <div><input type="radio" name="question5" value="3">(C)偶尔</div>
+                </li>
+
+                <li>
+                    <span>如何对待不健康的生活方式？</span>
+                    <div><input type="radio" name="question6" value="1">(A)无所谓</div>
+                    <div><input type="radio" name="question6" value="2">(B)想改进</div>
+                    <div><input type="radio" name="question6" value="3">(C)尝试过改进但失败了</div>
+                    <div><input type="radio" name="question6" value="4">(D)正在改善</div>
+                </li>
+            </ol>
+        </div>
+
+
+        <div>
+            <button type="submit">提交</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

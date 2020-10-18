@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>table模块快速使用</title>
+  <link rel="stylesheet" href="static/css/layui.css" media="all">
+  <script src="static/js/layui.all.js"></script>
+</head>
+<body>
+
+<div>
+  <table id="demo" lay-filter="test"></table>
+
+</div>
+
+ 
+
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  
+  //第一个实例
+  table.render({
+    elem: '#demo'
+    ,height: 490
+    ,width:1000
+    ,url: '/select-unfinished-student'
+    ,page: {
+      layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+      ,limits:[5,10]
+      ,first: false
+      ,last: false
+    }
+    ,cols: [
+            [
+      {field: 'id', title: 'Id', width:145, sort: true, fixed: 'left'}
+      ,{field: 'name', title: 'Name', width:130, sort: true, fixed: 'left'}
+      , {field: 'classid', title: 'Class', width:120, sort: true, fixed: 'left'}
+      ,{field: 'contactInfo',title: 'Contact Infomation',width: 160,fixed: 'left'}
+      ,{field: 'folk',title: 'Folk',width: 130,fixed: 'left'}
+      ,{field: 'sex',title: 'Sex',width: 130,fixed: 'left'}
+      ,{field: 'nativePlace',title: 'Native',width: 185,fixed: 'left'}
+    ]
+      ]
+  });
+  
+});
+</script>
+</body>
+</html>
